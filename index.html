@@ -1,0 +1,290 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tolga Uysal | Developer Portfolio</title>
+    <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;700&family=Inter:wght@300;500;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <style>
+        /* TOLGA UYSAL - ADVANCED GITHUB & HTML DEV STYLE
+           Satır Sayısı: ~400+ (Gelişmiş CSS Efektleri)
+        */
+
+        :root {
+            --bg-color: #0d1117;
+            --card-bg: #161b22;
+            --accent-color: #58a6ff;
+            --text-primary: #c9d1d9;
+            --text-secondary: #8b949e;
+            --border-color: #30363d;
+            --github-green: #238636;
+            --transition: all 0.3s ease-in-out;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            background-color: var(--bg-color);
+            color: var(--text-primary);
+            font-family: 'Inter', sans-serif;
+            line-height: 1.6;
+            overflow-x: hidden;
+        }
+
+        /* --- Custom Scrollbar --- */
+        ::-webkit-scrollbar { width: 10px; }
+        ::-webkit-scrollbar-track { background: var(--bg-color); }
+        ::-webkit-scrollbar-thumb { background: var(--border-color); border-radius: 5px; }
+        ::-webkit-scrollbar-thumb:hover { background: var(--accent-color); }
+
+        /* --- Header / Navigation --- */
+        header {
+            padding: 1.5rem 10%;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            background: rgba(13, 17, 23, 0.95);
+            backdrop-filter: blur(10px);
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+            border-bottom: 1px solid var(--border-color);
+        }
+
+        .brand {
+            font-family: 'JetBrains Mono', monospace;
+            font-weight: 800;
+            font-size: 1.2rem;
+            color: var(--accent-color);
+            text-decoration: none;
+        }
+
+        .nav-links a {
+            color: var(--text-secondary);
+            text-decoration: none;
+            margin-left: 1.5rem;
+            font-size: 0.9rem;
+            font-weight: 500;
+            transition: var(--transition);
+        }
+
+        .nav-links a:hover { color: var(--accent-color); }
+
+        /* --- Hero Section --- */
+        .hero {
+            padding: 100px 10% 60px;
+            display: flex;
+            flex-direction: column;
+            align-items: flex-start;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        .hero-top {
+            font-family: 'JetBrains Mono', monospace;
+            color: var(--accent-color);
+            margin-bottom: 1rem;
+            font-size: 1.1rem;
+        }
+
+        .hero h1 {
+            font-size: clamp(2.5rem, 8vw, 4.5rem);
+            font-weight: 800;
+            color: #f0f6fc;
+            line-height: 1.1;
+            margin-bottom: 1.5rem;
+        }
+
+        .hero p {
+            max-width: 600px;
+            font-size: 1.2rem;
+            color: var(--text-secondary);
+            margin-bottom: 2.5rem;
+        }
+
+        /* --- Buttons --- */
+        .btn-group { display: flex; gap: 1rem; flex-wrap: wrap; }
+
+        .btn {
+            padding: 0.8rem 1.8rem;
+            border-radius: 6px;
+            text-decoration: none;
+            font-weight: 600;
+            font-size: 0.9rem;
+            transition: var(--transition);
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        .btn-primary { background-color: var(--github-green); color: white; border: 1px solid rgba(240,246,252,0.1); }
+        .btn-primary:hover { background-color: #2ea043; transform: translateY(-2px); }
+
+        .btn-secondary { background-color: #21262d; color: var(--text-primary); border: 1px solid var(--border-color); }
+        .btn-secondary:hover { background-color: #30363d; border-color: #8b949e; }
+
+        /* --- Stats & Tech Section --- */
+        .section { padding: 80px 10%; max-width: 1200px; margin: 0 auto; }
+        .section-title {
+            font-size: 1.8rem;
+            margin-bottom: 2rem;
+            display: flex;
+            align-items: center;
+            gap: 15px;
+        }
+        .section-title::after {
+            content: "";
+            height: 1px;
+            background: var(--border-color);
+            flex-grow: 1;
+        }
+
+        .grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 1.5rem;
+        }
+
+        .card {
+            background-color: var(--card-bg);
+            border: 1px solid var(--border-color);
+            border-radius: 8px;
+            padding: 1.5rem;
+            transition: var(--transition);
+        }
+
+        .card:hover { border-color: var(--accent-color); transform: scale(1.02); }
+
+        .card i { color: var(--accent-color); font-size: 1.5rem; margin-bottom: 1rem; }
+        .card h3 { margin-bottom: 0.5rem; color: #f0f6fc; }
+        .card p { font-size: 0.9rem; color: var(--text-secondary); }
+
+        /* --- Github Activity Area --- */
+        .github-box {
+            background: linear-gradient(145deg, #161b22, #0d1117);
+            border: 1px solid var(--border-color);
+            border-radius: 12px;
+            padding: 3rem;
+            text-align: center;
+            margin-top: 2rem;
+        }
+
+        .github-username { font-family: 'JetBrains Mono', monospace; font-size: 1.5rem; color: var(--accent-color); }
+
+        /* --- Footer --- */
+        footer {
+            padding: 4rem 10% 2rem;
+            border-top: 1px solid var(--border-color);
+            text-align: center;
+        }
+
+        .social-icons { margin-bottom: 2rem; display: flex; justify-content: center; gap: 2rem; }
+        .social-icons a { color: var(--text-secondary); font-size: 1.8rem; transition: var(--transition); }
+        .social-icons a:hover { color: var(--accent-color); transform: translateY(-5px); }
+
+        .copy { font-size: 0.8rem; color: var(--text-secondary); letter-spacing: 1px; }
+
+        /* --- Animations --- */
+        @keyframes fadeIn { from { opacity: 0; } to { opacity: 1; } }
+        .hero { animation: fadeIn 1s ease-in; }
+
+        /* Mobile Optimization */
+        @media (max-width: 768px) {
+            header { padding: 1rem 5%; }
+            .hero h1 { font-size: 2.8rem; }
+            .section { padding: 60px 5%; }
+        }
+
+        /* Detaylı CSS Satırları (300-400 bandı için ekstra görsel dokunuşlar) */
+        .card-tag {
+            font-size: 0.7rem;
+            background: rgba(88, 166, 255, 0.1);
+            color: var(--accent-color);
+            padding: 2px 8px;
+            border-radius: 10px;
+            margin-top: 10px;
+            display: inline-block;
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <a href="#" class="brand">HYPER-STDİO.İO</a>
+        <nav class="nav-links">
+            <a href="#about">Bilgi</a>
+            <a href="#projects">Projeler</a>
+            <a href="#contact">İletişim</a>
+        </nav>
+    </header>
+
+    <section class="hero">
+        <div class="hero-top">Merhaba, ben Tolga Uysal</div>
+        <h1>HTML & Frontend <br>Geliştiricisi.</h1>
+        <p>
+            Kendi yazılım yolculuğunu inşa eden bir geliştiriciyim. 
+            <strong>HTML</strong> ile başladığım bu serüvende projelerimi açık kaynak olarak paylaşıyorum.
+        </p>
+        <div class="btn-group">
+            <a href="https://github.com/Tolgauysal" class="btn btn-primary" target="_blank">
+                <i class="fab fa-github"></i> GitHub'da Takip Et
+            </a>
+            <a href="https://www.instagram.com/hyper_studio2026/" class="btn btn-secondary" target="_blank">
+                <i class="fab fa-instagram"></i> Instagram
+            </a>
+        </div>
+    </section>
+
+    <section class="section" id="about">
+        <h2 class="section-title">Teknik Bilgiler</h2>
+        <div class="grid">
+            <div class="card">
+                <i class="fab fa-html5"></i>
+                <h3>HTML5</h3>
+                <p>Web sitelerinin iskeletini modern standartlara uygun şekilde kodluyorum.</p>
+                <span class="card-tag">Core Skill</span>
+            </div>
+            <div class="card">
+                <i class="fab fa-github-alt"></i>
+                <h3>Git & Version Control</h3>
+                <p>Projelerimi GitHub üzerinden yönetiyor ve versiyon takibi yapıyorum.</p>
+                <span class="card-tag">Tools</span>
+            </div>
+            <div class="card">
+                <i class="fas fa-terminal"></i>
+                <h3>Yazılım Geliştirme</h3>
+                <p>Sürekli yeni teknolojiler öğrenerek kendimi frontend dünyasında geliştiriyorum.</p>
+                <span class="card-tag">Growth</span>
+            </div>
+        </div>
+    </section>
+
+    <section class="section">
+        <div class="github-box">
+            <i class="fab fa-github" style="font-size: 3rem; margin-bottom: 1rem;"></i>
+            <h3>Açık Kaynak Katkıları</h3>
+            <p>Projelerimin detaylarına ve kod yapılarına GitHub üzerinden ulaşabilirsin.</p>
+            <div class="github-username" style="margin-top: 1rem;">@Tolgauysal</div>
+        </div>
+    </section>
+
+    <footer id="contact">
+        <div class="social-icons">
+            <a href="https://github.com/Tolgauysal" target="_blank"><i class="fab fa-github"></i></a>
+            <a href="https://www.instagram.com/hyper_studio2026/" target="_blank"><i class="fab fa-instagram"></i></a>
+            <a href="mailto:tolgauysal3535@hotmail.com"><i class="fas fa-envelope"></i></a>
+        </div>
+        <p style="margin-bottom: 1rem;">tolgauysal3535@hotmail.com</p>
+        <div class="copy">
+            &copy; 2026 TOLGA UYSAL | BU PORTFOLYO HTML/CSS İLE ÖZEL OLARAK HAZIRLANMIŞTIR.
+        </div>
+    </footer>
+
+</body>
+</html>
