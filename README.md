@@ -1,7 +1,7 @@
 # 👋 Selam, Ben Tolga Uysal!
 
 <p align="center">
-  <img src="https://raw.githubusercontent.com/Tolgauysal/Tolgauysal/main/Gemini_Generated_Image_t4r8mwt4r8mwt4r8.png" width="250" alt="HyperStudio Logo">
+  <img src="Gemini_Generated_Image_t4r8mwt4r8mwt4r8.png" width="250" alt="HyperStudio Logo">
 </p>
 
 ### 💻 Frontend Developer | HTML & CSS Araştırmacısı
